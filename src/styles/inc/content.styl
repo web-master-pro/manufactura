@@ -1,0 +1,192 @@
+h1
+h2
+h3
+h4
+h5
+h6
+    color $heading-color
+    font(Bold)
+    margin 1em 0 0.5em
+    line-height normal
+
+h1
+    font-size 2.6em
+
+h2
+    font-size 2.3em
+
+h3
+    font-size 2em
+
+h4
+    font-size 1.8em
+
+h5
+    font-size 1.4em
+
+h6
+    font-size 1.2em
+
+p
+    color $base-text-color
+    font()
+    font-size $base-font-size
+    line-height $base-line-height
+    margin 0 0 1.25em
+
+
+a
+    color $link-color
+    transition color 0.3s ease
+    text-decoration none
+
+    &:hover
+        color $link-hover-color
+        text-decoration underline
+
+img
+    max-width 100%
+    height auto
+
+i
+em
+    font-style italic
+
+b
+strong
+    font(Bold)
+
+ol
+ul
+    list-style-position inside
+    padding-left 2em
+
+ul
+    list-style-type disc
+
+ol
+    list-style-type decimal
+
+dt
+dd
+    line-height $base-line-height
+
+dt
+    font(Bold)
+
+dd
+    margin-left 0 //- Undo browser default
+
+pre
+code
+    font-family $fixed-font-family
+    font-size $fixed-font-size
+    line-height $fixed-line-height
+
+    overflow hidden
+    white-space pre-wrap
+    word-wrap break-word
+    tab-size 4
+
+pre
+    padding 1em
+    background #eee
+    border-radius 3px
+
+q
+    quotes "«" "»"
+    font-style italic
+
+    q
+        quotes "„" "“"
+        font-style italic
+
+blockquote
+    padding 11px
+    margin 0 0 22px
+    border-left 5px solid #eee
+
+    p
+    ul
+    ol
+        &:last-child
+            margin-bottom: 0
+
+        &:first-child
+            margin-top 0
+
+    footer
+    small
+        display block
+        font-size 80%
+        line-height 1.2
+
+        &:before
+            content '\2014 \00A0' //- em dash, nbsp
+
+hr
+    display block
+    height 1px
+    border 0
+    border-top 1px solid #ccc
+    margin 1em 0
+    padding 0
+
+
+.center
+    text-align center
+
+.clear
+    clear both
+
+.clearfix
+    cf()
+
+.text-muted
+    &
+    & > *
+        color $base-quiet-color
+
+
+.content-wrapper
+    img[align="left"]
+    img[style*="float: left"]
+    img[style*="float:left"]
+        margin 5px 15px 0px 0px
+
+    img[align="right"]
+    img[style*="float: right"]
+    img[style*="float:right"]
+        margin 5px 0px 0px 15px
+
+.align-image-center
+    text-align center
+
+.align-image-left
+    float left
+    margin 5px 15px 0px 0px
+
+.align-image-right
+    float right
+    margin 5px 0px 0px 15px
+
+
+.align-image-left
+.align-image-right
+.align-image-center
+    img
+        +below(375px)
+            margin 0
+            float none
+            width 100%
+            height auto
+            display block
+
+// Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
+// aspect ratio.
+
+.fluid-image
+    max-width 100%
+    height auto
+    display block
+

@@ -1,0 +1,19 @@
+include ../blocks/head/head
+include ../blocks/scripts/scripts
+
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Главная страница")
+
+    body
+        +header(id="header")
+        +footer(id="footer")
+
+        +scripts()
