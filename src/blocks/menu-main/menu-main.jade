@@ -2,37 +2,77 @@ mixin menu-main()
     nav.menu-main&attributes(attributes)
         ul.menu-main__list
             li.menu-main__item
-                a(href="#").menu-main__link Купить
+                if section == "buy"
+                    a(href="#").menu-main__link.active Купить
+                else
+                    a(href="#").menu-main__link Купить
             li.menu-main__item
-                a(href="#").menu-main__link.active Продать
+                if section == "sale"
+                    a(href="#").menu-main__link.active Продать
+                else
+                    a(href="#").menu-main__link Продать
             li.menu-main__item
-                a(href="#").menu-main__link Услуги
+                if section == "services"
+                    a(href="#").menu-main__link.active Услуги
+                else
+                    a(href="#").menu-main__link Услуги
                 ul.menu-main-sub
                     li.menu-main-sub__item
-                        a(href="#").menu-main-sub__link Услуга 1
+                        a(href="#").menu-main-sub__link Получить кредит
                     li.menu-main-sub__item
-                        a(href="#").menu-main-sub__link Услуга 2
+                        a(href="#").menu-main-sub__link Оценка изделий
                     li.menu-main-sub__item
-                        a(href="#").menu-main-sub__link Услуга 3
+                        a(href="#").menu-main-sub__link Комиссионный магазин
+                    li.menu-main-sub__item
+                        a(href="#").menu-main-sub__link Ремонт часов
+                    li.menu-main-sub__item
+                        a(href="#").menu-main-sub__link Хранение и страхование
             li.menu-main__item
-                a(href="#").menu-main__link Блог
+                if section == "blog"
+                    a(href="#").menu-main__link.active Блог
+                else
+                    a(href="#").menu-main__link Блог
             li.menu-main__item
-                a(href="#").menu-main__link О нас
+                if section == "about"
+                    a(href="#").menu-main__link.active О нас
+                else
+                    a(href="#").menu-main__link О нас
             li.menu-main__item
-                a(href="#").menu-main__link Контакты
+                if section == "contacts"
+                    a(href="#").menu-main__link.active Контакты
+                else
+                    a(href="#").menu-main__link Контакты
 
 mixin menu-main-footer()
     nav.menu-main.menu-main--footer&attributes(attributes)
         ul.menu-main__list
             li.menu-main__item
-                a(href="#").menu-main__link Купить
+                if section == "buy"
+                    a(href="#").menu-main__link.active Купить
+                else
+                    a(href="#").menu-main__link Купить
             li.menu-main__item
-                a(href="#").menu-main__link.active Продать
+                if section == "sale"
+                    a(href="#").menu-main__link.active Продать
+                else
+                    a(href="#").menu-main__link Продать
             li.menu-main__item
-                a(href="#").menu-main__link Услуги
+                if section == "services"
+                    a(href="#").menu-main__link.active Услуги
+                else
+                    a(href="#").menu-main__link Услуги
             li.menu-main__item
-                a(href="#").menu-main__link Блог
+                if section == "blog"
+                    a(href="#").menu-main__link.active Блог
+                else
+                    a(href="#").menu-main__link Блог
             li.menu-main__item
-                a(href="#").menu-main__link О нас
+                if section == "about"
+                    a(href="#").menu-main__link.active О нас
+                else
+                    a(href="#").menu-main__link О нас
             li.menu-main__item
-                a(href="#").menu-main__link Контакты
+                if section == "contacts"
+                    a(href="#").menu-main__link.active Контакты
+                else
+                    a(href="#").menu-main__link Контакты

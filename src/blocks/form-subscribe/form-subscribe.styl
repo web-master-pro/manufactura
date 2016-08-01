@@ -1,0 +1,65 @@
+.form-subscribe
+    width 100%
+    padding 25px 20px
+    +below(991px)
+        padding 25px 0 0
+
+    &__in
+        container(990px)
+        background-color #efefef
+        display flex
+        flex-flow row wrap
+        justify-content center
+        padding 12px
+
+    &__title
+        flex 0 0 auto
+        color #383838
+        font(Regular, 40)
+        font-size 14px
+        line-height 35px
+        margin 0 20px 0 0
+
+    &__group
+        flex 0 1 270px
+        max-width 270px
+        display flex
+        flex-flow row nowrap
+        justify-content space-between
+
+    &__input
+        flex 0 1 215px
+        height 35px
+        background-color white
+        border none
+        outline none
+        color #aeaeae
+        font(Regular,50)
+        font-size 12px
+        line-height 35px
+        padding 0 15px
+        margin 0 20px 0 0
+
+    &__button
+        flex 0 0 auto
+        display block
+        width 35px
+        height 35px
+        background-color #b38b10
+        border none
+        outline none
+        position relative
+        cursor pointer
+        &::after
+            content ""
+            display block
+            width 5px
+            height 5px
+            border-right 1px solid #fff
+            border-bottom 1px solid #fff
+            transform-origin center center
+            transform rotate(-45deg)
+            position absolute
+            top 15px
+            left 14px
+

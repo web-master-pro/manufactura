@@ -2,21 +2,43 @@ mixin menu-side()
     nav.menu-side&attributes(attributes)
         ul.menu-side__list
             li.menu-side__item
-                a(href="#").menu-side__link Купить
+                if section == "buy"
+                    a(href="#").menu-side__link.active Купить
+                else
+                    a(href="#").menu-side__link Купить
             li.menu-side__item
-                a(href="#").menu-side__link.active Продать
+                if section == "sale"
+                    a(href="#").menu-side__link.active Продать
+                else
+                    a(href="#").menu-side__link Продать
             li.menu-side__item
-                a(href="#").menu-side__link Услуги
+                if section == "services"
+                    a(href="#").menu-side__link.active Услуги
+                else
+                    a(href="#").menu-side__link Услуги
                 ul.menu-side-sub
                     li.menu-side-sub__item
-                        a(href="#").menu-side-sub__link Услуга 1
+                        a(href="#").menu-side-sub__link Получить кредит
                     li.menu-side-sub__item
-                        a(href="#").menu-side-sub__link Услуга 2
+                        a(href="#").menu-side-sub__link Оценка изделий
                     li.menu-side-sub__item
-                        a(href="#").menu-side-sub__link Услуга 3
+                        a(href="#").menu-side-sub__link Комиссионный магазин
+                    li.menu-side-sub__item
+                        a(href="#").menu-side-sub__link Ремонт часов
+                    li.menu-side-sub__item
+                        a(href="#").menu-side-sub__link Хранение и страхование
             li.menu-side__item
-                a(href="#").menu-side__link Блог
+                if section == "blog"
+                    a(href="#").menu-side__link.active Блог
+                else
+                    a(href="#").menu-side__link Блог
             li.menu-side__item
-                a(href="#").menu-side__link О нас
+                if section == "about"
+                    a(href="#").menu-side__link.active О нас
+                else
+                    a(href="#").menu-side__link О нас
             li.menu-side__item
-                a(href="#").menu-side__link Контакты
+                if section == "contacts"
+                    a(href="#").menu-side__link.active Контакты
+                else
+                    a(href="#").menu-side__link Контакты

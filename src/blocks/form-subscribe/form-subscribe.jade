@@ -1,0 +1,7 @@
+mixin form-subscribe()
+    form(action="#" method="POST").form-subscribe#form-subscribe&attributes(attributes)
+        .form-subscribe__in
+            h3.form-subscribe__title Подписаться на рассылку
+            .form-subscribe__group
+                input(type="email" name="email" placeholder="iwantwatches@gmail.com" required).form-subscribe__input
+                button(type="submit").form-subscribe__button

@@ -1,4 +1,4 @@
-- var section = "main"
+- var section = "contacts"
 
 include ../blocks/head/head
 include ../blocks/scripts/scripts
@@ -14,12 +14,12 @@ doctype html
 
 html(lang="ru-RU")
 
-    +head("Главная страница")
+    +head("Контакты")
 
-    body.page.page-main
+    body.page.page-contacts
         .page__container
             +header(id="header")
-                img(src="assets/img/main-header-1.jpg" alt="").header__img
+                img(src="assets/img/about-header.jpg" alt="").header__img
             main.main
                 .main__in
                 +form-subscribe()
