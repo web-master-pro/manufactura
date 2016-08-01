@@ -1,6 +1,15 @@
+include ../logo/logo
+include ../menu-main/menu-main
+include ../menu-lang/menu-lang
+include ../button-nav/button-nav
+
 mixin header()
     header.header&attributes(attributes)
-        .header__in
-            .header__logo(title="Logo")
-            h1.header__title Заголовок страницы
-            
+        .header__container
+            .header__box
+                +menu-lang(class="header__menu-lang")
+                .header__top
+                    +logo(class="header__logo")
+                    +menu-main(class="header__menu-main")
+                    +button-nav(class="header__button-nav")
+                img(src="assets/img/about-header.jpg" alt="").header__img

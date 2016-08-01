@@ -1,10 +1,56 @@
 .header
-    width: 100%;
-    position: relative;
+    width 100%
+    position relative
 
-    &__in
-        container(1000px)
-        padding 40px 20px
+    &__container
+        container(1010px)
+        padding 25px 10px
+        +below(991px)
+            padding 0
 
-    &__title
-        text-align center
+    &__menu-lang
+        position absolute
+        top -8px
+        right 25px
+        +below(991px)
+            display none
+
+    &__box
+        width 100%
+        background-color #efefef
+        padding 25px 25px 20px
+        position relative
+        +below(991px)
+            padding 20px 20px 15px
+
+    &__top
+        display flex
+        flex-flow row nowrap
+        justify-content space-between
+        position relative
+
+    &__img
+        display block
+        width 100%
+        height auto
+        margin-top 15px
+        margin-bottom 5px
+        +below(991px)
+            margin-top 10px
+
+    &__menu-main
+        +below(991px)
+            display none
+
+
+    &__button-nav
+        display none
+        position absolute
+        top 3px
+        right 0
+        +below(991px)
+            display block
+        +below(479px)
+            top 1px
+
+

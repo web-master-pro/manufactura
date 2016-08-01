@@ -1,0 +1,96 @@
+.menu-side
+    display block
+    padding 0
+    margin 0
+
+    &__list
+        display block
+        list-style none
+        font-size 0
+        padding 0
+        margin 0
+
+    &__item
+        display block
+        color #fff
+        font(Regular,50)
+        font-size 16px
+        line-height 18px
+        margin 0 0 20px
+        position relative
+
+
+    &__link
+        display inline-block
+        color #fff
+        padding-bottom 1px
+        text-decoration none
+        position relative
+        &::before
+            content ""
+            display block
+            width 0px
+            height 1px
+            background-color #b38b10
+            position absolute
+            bottom 0
+            left 0
+            transition width .3s ease
+        ^[0]__item--submenu &
+            padding-right 16px
+            &::after
+                content ""
+                display block
+                width 5px
+                height 5px
+                border-bottom 1px solid #fff
+                border-right 1px solid #fff
+                transform rotate(45deg)
+                transform-origin center center
+                position absolute
+                right 1px
+                top 5px
+        ^[0]__item--submenu.expanded &
+            &::after
+                transform rotate(-135deg) translate(-1px,-2px) !important
+                border-color #b38b10
+
+        &.active
+        ^[0]__item.active &
+        ^[0]__item.expanded &
+            color #b38b10
+            text-decoration none
+            &::before
+                width 100%
+            &::after
+                border-color #b38b10
+        &:hover
+            color @color
+            text-decoration none
+
+
+.menu-side-sub
+    display none
+    width 160px
+    list-style none
+    padding 10px 0 0 20px
+    margin 0
+
+    &__item
+        display block
+        width 100%
+        color #fff
+        font(Regular,50)
+        font-size 16px
+        line-height 18px
+        padding 0
+        margin 0
+
+    &__link
+        display block
+        color #fff
+        text-decoration none
+        padding 10px
+        &:hover
+            color #b38b10
+            text-decoration none

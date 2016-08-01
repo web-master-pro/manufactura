@@ -25,4 +25,5 @@
 
 //= ../libs/jquery-validation/jquery.validate.js
 //= ../libs/owl.carousel/owl.carousel.js
+//= ../libs/touchSwipe/jquery.touchSwipe.js
 //= ../libs/smoothscroll/smoothscroll.js

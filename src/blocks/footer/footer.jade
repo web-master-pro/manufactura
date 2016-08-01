@@ -1,3 +1,14 @@
+include ../logo/logo
+include ../menu-main/menu-main
+
 mixin footer()
     footer.footer&attributes(attributes)
         .footer__in
+            .footer__left
+                +logo-footer(class="footer__logo logo--footer")
+                p.footer__text Tel. <a href="tel:+43019141162" class="footer__phone">+43 (0)1 9141162</a> | <br>Fax: <a href="tel:+4301914116220" class="footer__phone">+43 (0)1 9141162-20</a> |
+                p.footer__text
+                    a(href="mailto:bundy@bundy.madebywild.com" class="footer__email") bundy@bundy.madebywild.com
+                address.footer__text BUNDY BUNDY GmbH | <br>Lautensackgasse 21 | 1140 Wien
+            .footer__right
+                +menu-main-footer(class="footer__menu")

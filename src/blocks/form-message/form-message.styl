@@ -1,0 +1,69 @@
+.form-message
+    display block
+    width 220px
+    height 220px
+    background-color #b38b10
+    padding 20px 20px 0
+    &--side
+        width 190px
+        padding 0
+        background-color transparent
+
+    &__row
+        display flex
+        flex-flow row nowrap
+        justify-content space-between
+        align-items flex-end
+        margin 0 0 15px
+
+    &__label
+        flex 0 0 auto
+        display inline-block
+        color white
+        font(Light,50)
+        font-size 14px
+        line-height 1
+        margin 0
+
+    &__input
+        flex 0 0 120px
+        display inline-block
+        width 120px
+        height 22px
+        border none
+        border-bottom 1px solid #fff
+        background-color transparent
+        outline none
+        color white
+        font(Light,50)
+        font-size 14px
+        line-height 26px
+
+    &__textarea
+        display block
+        width 100%
+        height 57px
+        background-color #fff
+        border none
+        resize none
+        margin 9px auto
+
+    &__button-wrapper
+        text-align center
+
+    &__button
+        display inline-block
+        background transparent
+        height 26px
+        border none
+        outline none
+        color white
+        font(Regular,50)
+        font-size 14px
+        line-height 26px
+        text-decoration underline
+        text-align center
+        cursor pointer
+        &:hover
+            text-decoration none
+

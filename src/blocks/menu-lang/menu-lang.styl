@@ -1,0 +1,85 @@
+.menu-lang
+    display inline-block
+    max-width 150px
+    position absolute
+    z-index 150
+    text-align right
+    &--side
+        display block
+        width 100%
+        max-width 100%
+        position relative
+        padding-top 20px
+        border-top 1px solid #eee
+        text-align left
+        margin-top 40px
+
+    &__button
+        display inline-block
+        background transparent
+        border none
+        outline none
+        color #b38b10
+        font(Regular,50)
+        font-size 12px
+        line-height 1
+        text-transform uppercase
+        padding 0 15px 0
+        margin 0
+        cursor pointer
+        position relative
+        &::after
+            content ""
+            display block
+            width 5px
+            height 5px
+            border-bottom 1px solid #b38b10
+            border-right 1px solid #b38b10
+            transform rotate(45deg)
+            transform-origin center center
+            position absolute
+            right 1px
+            top 1px
+        &.expanded
+            &::after
+                transform rotate(-135deg) translate(-1px,-2px) !important
+
+        ^[0]--side &
+            padding-left 0
+
+    &__menu
+        display none
+        list-style none
+        text-align left
+        background-color #fff
+        padding 0
+        margin 5px 0 0 0
+        ^[0]--side &
+            background-color transparent
+
+    &__item
+        display block
+        width 100%
+        color #383838
+        font(Regular,50)
+        font-size 12px
+        line-height 1
+        text-transform uppercase
+        padding 5px 0
+        margin 0
+
+    &__link
+        display block
+        color #383838
+        text-decoration none
+        padding 7px 15px
+        transition all .3s ease
+        &:hover
+            color #b38b10
+            text-decoration none
+            // background-color #f9f9F9
+        ^[0]--side &
+            color #fff
+            padding 5px 10px
+
+

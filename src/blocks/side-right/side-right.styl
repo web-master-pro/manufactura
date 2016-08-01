@@ -1,0 +1,28 @@
+.side-right
+    display none
+    width 250px
+    height 100%
+    background-color #383838
+    transition none
+    transition all .3s ease
+    overflow-y auto
+    -webkit-overflow-scrolling touch
+    position fixed
+    top 0
+    bottom 0
+    right -250px
+    z-index 2500
+    +below(991px)
+        display block !important
+
+    &__in
+        padding 30px
+
+    &__title
+        color #b38b10
+        font(Regular,50)
+        font-size 18px
+        line-height 1
+        text-align center
+        margin 40px 0 10px
+

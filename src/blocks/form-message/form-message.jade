@@ -1,0 +1,15 @@
+mixin form-message()
+    form(action="#" method="POST").form-message#form-message&attributes(attributes)
+        .form-message__row
+            label(for="form-message-name").form-message__label Имя
+            input(type="text" name="name" required).form-message__input#form-message-name
+        .form-message__row
+            label(for="form-message-email").form-message__label Почта
+            input(type="email" name="email" required).form-message__input#form-message-email
+        label(for="form-message-message" required).form-message__label Сообщение:
+        textarea(name="message").form-message__textarea#form-message-message
+        .form-message__button-wrapper
+            button(type="submit").form-message__button Написать
+
+
+

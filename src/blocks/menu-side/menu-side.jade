@@ -1,0 +1,22 @@
+mixin menu-side()
+    nav.menu-side&attributes(attributes)
+        ul.menu-side__list
+            li.menu-side__item
+                a(href="#").menu-side__link Купить
+            li.menu-side__item
+                a(href="#").menu-side__link.active Продать
+            li.menu-side__item
+                a(href="#").menu-side__link Услуги
+                ul.menu-side-sub
+                    li.menu-side-sub__item
+                        a(href="#").menu-side-sub__link Услуга 1
+                    li.menu-side-sub__item
+                        a(href="#").menu-side-sub__link Услуга 2
+                    li.menu-side-sub__item
+                        a(href="#").menu-side-sub__link Услуга 3
+            li.menu-side__item
+                a(href="#").menu-side__link Блог
+            li.menu-side__item
+                a(href="#").menu-side__link О нас
+            li.menu-side__item
+                a(href="#").menu-side__link Контакты

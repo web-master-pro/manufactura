@@ -13,27 +13,33 @@ fs($min-font, $max-font, $min-width = 320px, $max-width=1100px)
     @media (min-width: $max-width)
         font-size: $max-font
 
-font(face = Regular)
+font(face = Regular, ls = 0)
     if face == Regular
-        font-family "Circe-Regular", sans-serif
+        font-family "Rubik-Regular", sans-serif
         font-weight normal
         font-style normal
     if face == Bold
-        font-family "Circe-Bold", sans-serif
-        font-weight normal
-        font-style normal
-    if face == Extra
-        font-family "Circe-ExtraBold", sans-serif
+        font-family "Rubik-Bold", sans-serif
         font-weight normal
         font-style normal
     if face == Light
-        font-family "Circe-Light", sans-serif
+        font-family "Rubik-Light", sans-serif
+        font-weight normal
+        font-style normal
+    if face == Play
+        font-family "PlayfairDisplaySC-Regular", sans-serif
+        font-weight normal
+        font-style normal
+    if face == PlayBold
+        font-family "PlayfairDisplaySC-Bold", sans-serif
         font-weight normal
         font-style normal
     if face == PTSans
-        font-family "PTSans-BoldItalic", sans-serif
+        font-family "PTSans-Narrow", sans-serif
         font-weight normal
         font-style normal
+    if ls != 0
+        letter-spacing ps-tracking(ls)
 
 // Clearfix
 cf()

@@ -1,0 +1,38 @@
+mixin menu-main()
+    nav.menu-main&attributes(attributes)
+        ul.menu-main__list
+            li.menu-main__item
+                a(href="#").menu-main__link Купить
+            li.menu-main__item
+                a(href="#").menu-main__link.active Продать
+            li.menu-main__item
+                a(href="#").menu-main__link Услуги
+                ul.menu-main-sub
+                    li.menu-main-sub__item
+                        a(href="#").menu-main-sub__link Услуга 1
+                    li.menu-main-sub__item
+                        a(href="#").menu-main-sub__link Услуга 2
+                    li.menu-main-sub__item
+                        a(href="#").menu-main-sub__link Услуга 3
+            li.menu-main__item
+                a(href="#").menu-main__link Блог
+            li.menu-main__item
+                a(href="#").menu-main__link О нас
+            li.menu-main__item
+                a(href="#").menu-main__link Контакты
+
+mixin menu-main-footer()
+    nav.menu-main.menu-main--footer&attributes(attributes)
+        ul.menu-main__list
+            li.menu-main__item
+                a(href="#").menu-main__link Купить
+            li.menu-main__item
+                a(href="#").menu-main__link.active Продать
+            li.menu-main__item
+                a(href="#").menu-main__link Услуги
+            li.menu-main__item
+                a(href="#").menu-main__link Блог
+            li.menu-main__item
+                a(href="#").menu-main__link О нас
+            li.menu-main__item
+                a(href="#").menu-main__link Контакты

@@ -1,0 +1,8 @@
+include ../form-message/form-message
+
+mixin sticker()
+    .sticker&attributes(attributes)
+        .sticker__in
+            button.sticker__go-top Подняться наверх
+            button.sticker__write-us Написать нам
+            +form-message(class="sticker__form")

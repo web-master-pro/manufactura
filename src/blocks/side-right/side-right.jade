@@ -1,0 +1,12 @@
+include ../menu-side/menu-side
+include ../menu-lang/menu-lang
+include ../form-message/form-message
+
+mixin side-right()
+    // Панель с мобильным меню
+    .side-right&attributes(attributes)
+        .side-right__in
+            +menu-side()
+            +menu-lang(class="menu-lang--side")
+            h3.side-right__title Написать нам
+            +form-message(class="form-message--side")
