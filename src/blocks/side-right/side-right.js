@@ -66,4 +66,9 @@ $(document).ready(function(){
         }
     });
 
+    $(".menu-side-sub__link").click(function(){
+        toggleSidebar();
+        return true;
+    })
+
 });

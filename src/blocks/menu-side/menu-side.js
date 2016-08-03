@@ -6,19 +6,20 @@ $(document).ready(function(){
         };
     });
 
-    $(".menu-side__item--submenu").click(function(e){
-        var submenu = $(this).find(".menu-side-sub"),
+    $(".menu-side__item--submenu .menu-side__link").click(function(e){
+        var submenu = $(this).next(".menu-side-sub"),
+            item = $(this).parent(".menu-side__item"),
             hasSubmenu = submenu.length > 0;
         if (hasSubmenu) {
             e.preventDefault();
         }
-        if ($(this).hasClass("expanded")) {
-            $(this).removeClass("expanded");
+        if (item.hasClass("expanded")) {
+            item.removeClass("expanded");
             submenu.slideUp(200);
         } else {
             $(".menu-side__item").removeClass("expanded");
             $(".menu-side-sub").slideUp(100)
-            $(this).addClass("expanded");
+            item.addClass("expanded");
             submenu.slideDown(300);
         };
         return !hasSubmenu;

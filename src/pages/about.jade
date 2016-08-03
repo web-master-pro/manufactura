@@ -7,6 +7,7 @@ include ../blocks/footer/footer
 include ../blocks/sticker/sticker
 include ../blocks/side-right/side-right
 include ../blocks/form-subscribe/form-subscribe
+include ../blocks/why/why
 
 doctype html
 
@@ -16,12 +17,13 @@ html(lang="ru-RU")
 
     +head("О нас")
 
-    body.page.page-about
+    body.page.page--about
         .page__container
             +header(id="header")
                 img(src="assets/img/about-header.jpg" alt="").header__img
             main.main
                 .main__in
+                +why()
                 +form-subscribe()
             +footer(id="footer")
             +sticker()

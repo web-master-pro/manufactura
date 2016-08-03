@@ -22,27 +22,9 @@
         position relative
         &:last-child
             margin-right 0
-        &--submenu
-            padding-right 16px
-            &::after
-                content ""
-                display block
-                width 5px
-                height 5px
-                border-bottom 1px solid #383838
-                border-right 1px solid #383838
-                transform rotate(45deg)
-                transform-origin center center
-                position absolute
-                right 1px
-                top 5px
-                ^[0]--footer &
-                    border-color #e8e8e8
-        &.expanded
-            &::after
-                transform rotate(-135deg) translate(-1px,-2px) !important
-                border-color #b38b10
+
         &:hover
+        &.active
             &::after
                 border-color #b38b10
         ^[0]--footer &
@@ -68,6 +50,26 @@
             transition width .3s ease
         ^[0]--footer &
             color #e8e8e8
+        ^[0]__item--submenu &
+            padding-right 16px
+            &::before
+                content ""
+                display block
+                width 5px
+                height 5px
+                border-bottom 1px solid #383838
+                border-right 1px solid #383838
+                transform rotate(45deg)
+                transform-origin center center
+                position absolute
+                right 1px
+                top 5px
+                ^[0]--footer &
+                    border-color #e8e8e8
+        ^[0]__item.expanded &
+            &::before
+                transform rotate(-135deg) translate(-1px,-2px) !important
+                border-color #b38b10
         &:hover
         &.active
         ^[0]__item.active &
@@ -76,6 +78,10 @@
             text-decoration none
             &::after
                 width 100%
+            &::before
+                border-color #b38b10
+
+
 
 
 
@@ -88,7 +94,9 @@
     position absolute
     top 25px
     left 0
+    z-index 100
     background-color #fff
+    box-shadow 0px 2px 5px rgba(0,0,0,.1)
 
     .menu-main__item:last-child &
         left auto

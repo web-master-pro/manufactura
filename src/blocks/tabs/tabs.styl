@@ -1,0 +1,123 @@
+.tabs
+    width 100%
+    max-width 800px
+    margin-left auto
+    margin-right auto
+    position relative
+
+    &__tabs
+        list-style none
+        padding 0
+        margin 0 0 40px
+        display flex
+        flex-flow row nowrap
+        justify-content space-around
+        +below(767px)
+            flex-direction column
+            max-width 280px
+            margin-right auto
+            margin-left auto
+
+    &__tab
+        flex 0 0 auto
+        padding 0
+        margin 0
+        // text-align center
+        position relative
+
+
+    &__tab-link
+        display inline-block
+        color #383838
+        font(PlayBold)
+        font-size 14px
+        line-height 1.2
+        text-align center
+        margin 0
+        text-decoration none
+        position relative
+        transition color .3s ease
+        &::after
+            content ""
+            display block
+            width 14px
+            height 7px
+            border-style solid
+            border-width 7px 7px 0 7px
+            border-color #b38b10 transparent transparent transparent
+            position absolute
+            bottom -10px
+            left 50%
+            margin-left -7px
+            opacity 0
+            transition opacity .3s ease
+        &:hover
+        ^[0]__tab.active &
+            color #b38b10
+            text-decoration none
+            &::after
+                opacity 1
+        +below(767px)
+            margin-bottom 10px
+            padding-left 15px
+            text-align left
+            br
+                display none
+            &::after
+                display none
+            ^[0]__tab.active &
+                &::before
+                    content ""
+                    display block
+                    width 7px
+                    height 10px
+                    border-style solid
+                    border-width 5px 0 5px 7px
+                    border-color transparent transparent transparent #b38b10
+                    position absolute
+                    top 2px
+                    left 0
+
+
+    &__pages
+        display block
+        width 100%
+        list-style none
+        padding 0
+        margin 0
+
+    &__page
+        display none
+        width 100%
+        padding 0
+        margin 0
+        &.active
+            display block
+
+    &__title
+        color #383838
+        font(Medium,-10)
+        font-size 15px
+        line-height 1
+        text-transform uppercase
+        margin 0 0 1.4em
+
+    &__text
+        column-count 2
+        column-gap 25px
+        p
+            color #383838
+            font(Light,-10)
+            font-size 15px
+            line-height 1.2
+            margin 0 0 1.2em
+        +below(767px)
+            column-count 1
+
+    p&__intro
+        color #383838
+        font(Regular,-10)
+        font-size 15px
+        line-height 1.2
+        margin 0 0 1.2em
+

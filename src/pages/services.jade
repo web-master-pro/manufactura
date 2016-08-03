@@ -7,6 +7,7 @@ include ../blocks/footer/footer
 include ../blocks/sticker/sticker
 include ../blocks/side-right/side-right
 include ../blocks/form-subscribe/form-subscribe
+include ../blocks/tabs/tabs
 
 doctype html
 
@@ -16,11 +17,13 @@ html(lang="ru-RU")
 
     +head("Услуги")
 
-    body.page.page-services
+    body.page.page--services
         .page__container
             +header(id="header")
             main.main
                 .main__in
+                    h1.title Услуги
+                    +tabs()
                 +form-subscribe()
             +footer(id="footer")
             +sticker()
