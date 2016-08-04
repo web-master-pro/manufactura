@@ -1,0 +1,51 @@
+.intro
+    width 100%
+    max-width 100%
+    padding 0 20px
+    margin-right auto
+    margin-left auto
+    padding-bottom 30px
+    &--about
+        max-width 630px
+    &--sale
+        max-width 700px
+
+    &__quote
+        color #383838
+        font(PlayBold,-10)
+        font-size 16px
+        font-style italic
+        line-height 21px
+        text-align center
+        padding 0
+        margin 0 0 10px
+
+    &__cite
+        display block
+        color #7c7c7c
+        font(Regular,-10)
+        font-size 14px
+        line-height 24px
+        text-align center
+        padding 0 0 15px
+        margin 0 0 20px
+        position relative
+        &::after
+            content ""
+            display block
+            width 120px
+            height 1px
+            background-color #b38b10
+            position absolute
+            bottom 0
+            left 50%
+            margin-left -60px
+
+    &__text
+        color #383838
+        font(Light,-10)
+        font-size 15px
+        line-height 21px
+        text-align center
+        margin 0 0 20px
+

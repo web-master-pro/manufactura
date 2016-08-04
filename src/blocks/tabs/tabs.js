@@ -4,7 +4,6 @@ $(document).ready(function(){
         if (window.location.hash) {
             var hash = window.location.hash.substring(1);
                 index = $(".tabs__tab[data-tab='" + hash + "']").index(".tabs__tab");
-            console.log(index);
             if (index > -1) {
                 $(".tabs__tab").removeClass("active");
                 $(".tabs__tab").eq(index).addClass("active");

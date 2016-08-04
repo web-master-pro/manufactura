@@ -34,3 +34,35 @@ body
 a, input, *:focus
     outline none
 
+
+// Полосы прокрутки
+
+::-webkit-scrollbar-button
+    background-image url("")
+    background-repeat no-repeat
+    width 5px
+    height 0px
+
+// Дорожка, по которой двигается бегунок прокрутки:
+::-webkit-scrollbar-track
+    background-color #ddd
+
+// Бегунок полосы прокрутки:
+::-webkit-scrollbar-thumb
+    -webkit-border-radius 0px
+    border-radius 0px
+    background-color #898989
+
+::-webkit-scrollbar-thumb:hover
+    background-color darken(#898989,20%)
+
+::-webkit-resizer
+    background-image url("")
+    background-repeat no-repeat
+    width 9px
+    height 0px
+
+// Основная ширина полосы прокрутки.
+::-webkit-scrollbar
+    width 9px
+

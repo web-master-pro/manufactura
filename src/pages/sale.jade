@@ -7,6 +7,7 @@ include ../blocks/footer/footer
 include ../blocks/sticker/sticker
 include ../blocks/side-right/side-right
 include ../blocks/form-subscribe/form-subscribe
+include ../blocks/form/form
 
 doctype html
 
@@ -16,14 +17,17 @@ html(lang="ru-RU")
 
     +head("Продажа")
 
-    body.page.page--sale
+    body.page
         .page__container
-            +header(id="header")
+            +header(class="page__header")
                 img(src="assets/img/sale-header.jpg" alt="").header__img
-            main.main
-                .main__in
+            main.main.page__main
+                h1.title ПРОДАТЬ ЧАСЫ
+                .intro.intro--sale
+                    p.intro__text Our shirt factory is located in Ashland, PA and our neckwear factory in Pilot Mountain, NC. Our wholesale showroom and corporate office is located in New York City. Our shirt factory is located in Ashland, PA and our neckwear factory in Pilot Mountain, NC. Our wholesale showroom and corporate office is located in New York City. Our shirt factory is located in Ashland, PA and our neckwear factory in Pilot Mountain, NC. Our wholesale showroom and corporate office is located.
+                +form-sale()
                 +form-subscribe()
-            +footer(id="footer")
+            +footer(class="page__footer")
             +sticker()
         +side-right()
         +scripts()

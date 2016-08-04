@@ -16,14 +16,13 @@ html(lang="ru-RU")
 
     +head("Главная страница")
 
-    body.page.page--main
+    body.page
         .page__container
-            +header(id="header")
+            +header(class="page__header")
                 img(src="assets/img/main-header-1.jpg" alt="").header__img
-            main.main
-                .main__in
+            main.main.page__main
                 +form-subscribe()
-            +footer(id="footer")
+            +footer(class="page__footer")
             +sticker()
         +side-right()
         +scripts()

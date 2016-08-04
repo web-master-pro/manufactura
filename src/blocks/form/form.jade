@@ -1,0 +1,47 @@
+mixin form-contacts()
+    form(action="#").form#form-contacts&attributes(attributes)
+       .form__in
+            .form__group
+                .input.form__input
+                    label(for="form-contacts-name").input__label Имя
+                    input(type="text" name="name" required).input__input#form-contacts-name
+                .input.form-contacts__input
+                    label(for="form-contacts-email").input__label Почта
+                    input(type="email" name="email" required).input__input#form-contacts-email
+
+            .input.form__input
+                label(for="form-contacts-subject").input__label Тема
+                input(type="text" name="subject" required).input__input#form-contacts-subject
+
+            .textarea.form__textarea
+                label(for="form-contacts-message").textarea__label Сообщение
+                textarea(name="message" required).textarea__textarea#form-contacts-message
+
+            button(type="submit").form-contacts__button Отправить
+
+mixin form-sale()
+    form(action="#").form.form--sale#form-sale&attributes(attributes)
+       .form__in
+            .form__group
+                .input.form__input
+                    label(for="form-sale-name").input__label Имя
+                    input(type="text" name="name" required).input__input#form-sale-name
+                .input.form__input
+                    label(for="form-sale-email").input__label Почта
+                    input(type="email" name="email" required).input__input#form-sale-email
+
+            .input.form__input
+                label(for="form-sale-subject").input__label Тема
+                input(type="text" name="subject" required).input__input#form-sale-subject
+
+            .file-upload.form__input
+                label(for="form-sale-file").file-upload__label Прикрепить фото
+                .file-upload__file
+                input(type="file" name="file[]" accept="image" autocomplete="off" multiple="multiple")#form-sale-file.file-upload__input
+                button.file-upload__button +
+
+            .textarea.form__textarea
+                label(for="form-sale-message").textarea__label Сообщение
+                textarea(name="message" required).textarea__textarea#form-sale-message
+
+            button(type="submit").form__button Отправить

@@ -17,15 +17,14 @@ html(lang="ru-RU")
 
     +head("Услуги")
 
-    body.page.page--services
+    body.page
         .page__container
-            +header(id="header")
-            main.main
-                .main__in
-                    h1.title Услуги
-                    +tabs()
+            +header(class="page__header")
+            main.main.page__main
+                h1.title Услуги
+                +tabs()
                 +form-subscribe()
-            +footer(id="footer")
+            +footer(class="page__footer")
             +sticker()
         +side-right()
         +scripts()

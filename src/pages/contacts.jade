@@ -7,6 +7,10 @@ include ../blocks/footer/footer
 include ../blocks/sticker/sticker
 include ../blocks/side-right/side-right
 include ../blocks/form-subscribe/form-subscribe
+include ../blocks/contacts/contacts
+include ../blocks/partners/partners
+include ../blocks/form/form
+include ../blocks/map/map
 
 doctype html
 
@@ -16,14 +20,21 @@ html(lang="ru-RU")
 
     +head("Контакты")
 
-    body.page.page--contacts
+    body.page
         .page__container
-            +header(id="header")
-                img(src="assets/img/about-header.jpg" alt="").header__img
-            main.main
-                .main__in
+            +header(class="page__header")
+                img(src="assets/img/contacts-header.jpg" alt="").header__img
+            main.main.page__main
+                h1.title КОНТАКТЫ
+                +contacts()
+                h2.title НАПИСАТЬ НАМ
+                +form-contacts()
+                h2.title КАК ДОБРАТЬСЯ
+                +map()
+                h2.title Партнеры
+                +partners()
                 +form-subscribe()
-            +footer(id="footer")
+            +footer(class="page__footer")
             +sticker()
         +side-right()
         +scripts()

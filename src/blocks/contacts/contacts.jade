@@ -1,0 +1,14 @@
+mixin contacts()
+    .contacts&attributes(attributes)
+        .contacts__in
+            .contacts__col
+                h3.contacts__caption Телефон
+                p.contacts__text
+                    a(href="tel:+79637834582").contacts__phone +7 963783 45 82
+            .contacts__col
+                h3.contacts__caption Адрес
+                address.contacts__text Avenue Louise 158 <br>1050, Bruxelles
+            .contacts__col
+                h3.contacts__caption Наша почта
+                p.contacts__text
+                    a(href="mailto:info@manufacture.com").contacts__email info@manufacture.com

@@ -1,0 +1,13 @@
+include ../button-more/button-more
+
+mixin photos()
+    .photos&attributes(attributes)
+        .photos__photos
+            img(src="assets/img/photos/photo-1.jpg" alt="").photos__photo
+            img(src="assets/img/photos/photo-2.jpg" alt="").photos__photo
+            img(src="assets/img/photos/photo-3.jpg" alt="").photos__photo
+            img(src="assets/img/photos/photo-4.jpg" alt="").photos__photo
+            img(src="assets/img/photos/photo-5.jpg" alt="").photos__photo
+            img(src="assets/img/photos/photo-6.jpg" alt="").photos__photo
+        .photos__in
+            +button-more()

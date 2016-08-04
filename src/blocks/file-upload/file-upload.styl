@@ -1,0 +1,63 @@
+.file-upload
+    display flex
+    flex-flow row nowrap
+    justify-content flex-start
+    width 100%
+    height 26px
+    border-bottom 1px solid #a2a2a2
+    position relative
+    overflow hidden
+
+    &__label
+        flex 0 0 auto
+        padding 0 10px 0
+        color #b38b10
+        font(Regular,50)
+        font-size 14px
+        line-height 26px
+        margin 0 10px 0 0
+        cursor pointer
+
+    &__input
+        position absolute
+        left 0
+        right 0
+        top 0
+        width 100%
+        height 100%
+        transform scale(20)
+        letter-spacing 10em
+        opacity 0
+        cursor pointer
+        &:hover + ^[0]__button
+            background-color darken(#aeaeae,15%)
+
+    &__file
+        flex 1 1 auto
+        color #aeaeae
+        font(Regular,50)
+        font-size 12px
+        line-height 26px
+        overflow(ellipsis)
+
+
+    &__button
+        flex 0 0 auto
+        width 170px
+        height 26px
+        background-color #aeaeae
+        border none
+        outline none
+        color white
+        font(Medium)
+        font-size 16px
+        line-height 26px
+        margin-left 10px
+        +below(991px)
+            width 26px
+        // +below(400px)
+        //     display none
+
+
+
+

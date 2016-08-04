@@ -1,4 +1,4 @@
-- var section = "buy"
+- var section = "blog"
 
 include ../blocks/head/head
 include ../blocks/scripts/scripts
@@ -14,11 +14,12 @@ doctype html
 
 html(lang="ru-RU")
 
-    +head("Карточка")
+    +head("Блог")
 
     body.page
         .page__container
             +header(class="page__header")
+                img(src="assets/img/article-header.jpg" alt="").header__img
             main.main.page__main
                 +form-subscribe()
             +footer(class="page__footer")
