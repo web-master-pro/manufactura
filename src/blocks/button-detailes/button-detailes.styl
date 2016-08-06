@@ -1,0 +1,38 @@
+.button-detailes
+    display inline-block
+    width 145px
+    height 35px
+    background transparent
+    border 1px solid #b38b10
+    outline none
+    color white
+    font(Regular, 50)
+    font-size 14px
+    line-height 1
+    text-align center
+    text-transform uppercase
+    padding 11px
+    text-decoration none
+    position relative
+    &::before
+        content ""
+        display block
+        width 100%
+        position absolute
+        top 35px
+        left 0
+        right 0
+        bottom 0
+        background-color #b38b10
+        transition top .5s ease .2s
+    &:hover
+        color @color
+        text-decoration none
+        &::before
+            top 0
+            transition top .5s ease
+
+    span
+        position relative
+        z-index 10
+

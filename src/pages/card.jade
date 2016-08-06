@@ -7,6 +7,8 @@ include ../blocks/footer/footer
 include ../blocks/sticker/sticker
 include ../blocks/side-right/side-right
 include ../blocks/form-subscribe/form-subscribe
+include ../blocks/watches/watches
+include ../blocks/card/card
 
 doctype html
 
@@ -20,6 +22,9 @@ html(lang="ru-RU")
         .page__container
             +header(class="page__header")
             main.main.page__main
+                +card()
+                h2.title ПОСЛЕДНИЕ ПРОСМОТРЕННЫЕ
+                +watches()
                 +form-subscribe()
             +footer(class="page__footer")
             +sticker()

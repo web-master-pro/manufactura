@@ -1,0 +1,16 @@
+mixin breadcrumb()
+    .breadcrumb&attributes(attributes)
+        ul.breadcrumb__list
+            li.breadcrumb__item
+                a(href="main.html").breadcrumb__link Главная страница
+            li.breadcrumb__item
+                a(href="blog.html").breadcrumb__link Блог
+            li.breadcrumb__item Название статьи
+
+mixin breadcrumb-blog()
+    .breadcrumb.breadcrumb--blog&attributes(attributes)
+        ul.breadcrumb__list
+            li.breadcrumb__item
+                a(href="main.html").breadcrumb__link Главная страница
+            li.breadcrumb__item Блог
+            

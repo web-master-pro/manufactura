@@ -1,0 +1,87 @@
+.article
+    width 100%
+
+    &__container
+        container(1010px)
+        padding 0 10px 25px
+        margin-top -30px
+        +below(991px)
+            margin-top -5px
+            padding 0
+
+    &__header
+        display flex
+        flex-flow row nowrap
+        justify-content center
+        align-items center
+        min-height 500px
+        background-color #000
+        background-repeat no-repeat
+        background-size cover
+        background-position center center
+        border-left 25px solid  #efefef
+        border-right 25px solid  #efefef
+        border-bottom 25px solid  #efefef
+        +below(991px)
+            border-right-width 20px
+            border-left-width 20px
+            border-bottom-width 20px
+        +below(480px)
+            min-height 250px
+
+
+    &__header-content
+        padding 50px 20px
+
+    &__title
+        color #b38b10
+        font(PlayBold,50)
+        font-size 33px
+        line-height 1.1
+        text-align center
+        margin 0 0 .5em
+
+    &__subtitle
+        color white
+        font(Play)
+        font-size 20px
+        line-height 1.5
+        text-align center
+        margin 0 0 25px
+
+    &__author
+        color #c6c6c6
+        font(Regular,-10)
+        font-size 16px
+        font-style italic
+        line-height 1.3
+        text-align center
+        margin 0 0 5px
+
+    &__date
+        display block
+        color #c6c6c6
+        font(Light,-10)
+        font-size 16px
+        line-height 1.3
+        text-align center
+        margin 0
+
+    &__content
+        padding 75px 85px 50px
+        +below(767px)
+            padding 50px 40px 40px
+        +below(479px)
+            padding 40px 20px 30px
+
+    &__footer
+        padding 0 85px 40px
+        +below(767px)
+            padding 0 40px 40px
+        +below(479px)
+            padding 0 20px 40px
+
+    &__share
+        margin-bottom 45px
+        +below(991px)
+            margin-bottom 30px

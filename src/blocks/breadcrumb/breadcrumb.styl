@@ -1,0 +1,46 @@
+.breadcrumb
+    display block
+    width 100%
+    &--blog
+        container(980px)
+        padding 20px 20px 0
+        margin-bottom -20px
+
+    &__list
+        list-style none
+        display inline-block
+        padding 0
+        margin 0
+
+    &__item
+        display inline-block
+        color #b38b10
+        font(Light,-10)
+        font-size 14px
+        line-height 1.2
+        padding-right 16px
+        margin-right 12px
+        position relative
+        &::after
+            content ""
+            display block
+            width 5px
+            height 5px
+            border-top 1px solid #383838
+            border-right 1px solid #383838
+            transform rotate(45deg)
+            position absolute
+            right 0
+            top 5px
+        &:last-child
+            padding-right 0
+            margin-right 0
+            &::after
+                display none
+
+    &__link
+        color #383838
+        text-decoration none
+        &:hover
+            color #b38b10
+            text-decoration underline

@@ -1,0 +1,47 @@
+.slider-article
+    position relative
+    padding 70px 0
+    margin 0 -40px
+    +below(991px)
+        padding 40px 0
+        margin 0
+
+    &__slider
+        width 100%
+        position relative
+        margin-bottom 25px
+
+    &__slide
+        width 100%
+        height auto
+
+    .owl-dots
+        text-align center
+        font-size 0
+        position absolute
+        left 0
+        right 0
+        bottom 30px
+
+    .owl-dot
+        display inline-block
+        width 10px
+        height 10px
+        background-color white
+        border-radius 50%
+        margin 0 7px
+        cursor pointer
+        &.active
+        &:hover
+            background-color #b38b10
+
+    &__caption
+        color #7c7c7c
+        font(Regular,-10)
+        font-size 14px
+        font-style italic
+        line-height 1.2
+        text-align center
+        margin 0
+
+

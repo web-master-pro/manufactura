@@ -1,0 +1,21 @@
+include ../button-detailes/button-detailes
+
+mixin slider-header()
+    .slider-header&attributes(attributes)
+        .slider-header__slide(style="background-image: url(assets/img/main-header-1.jpg);")
+            .slider-header__content 
+                h1.slider-header__title DUOMETR<br>LUXURY WATCH
+                p.slider-header__subtitle Kelly leather handbag
+                +button-detailes(class="slider-header__button")
+        .slider-header__slide(style="background-image: url(assets/img/main-header-1.jpg);")
+            .slider-header__content
+                h2.slider-header__title DUOMETR<br>LUXURY WATCH
+                p.slider-header__subtitle Kelly leather handbag
+                +button-detailes(class="slider-header__button")
+        .slider-header__slide(style="background-image: url(assets/img/main-header-1.jpg);")
+            .slider-header__content
+                h2.slider-header__title DUOMETR<br>LUXURY WATCH
+                p.slider-header__subtitle Kelly leather handbag
+                +button-detailes(class="slider-header__button")
+
+

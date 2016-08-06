@@ -1,6 +1,12 @@
 .textarea
     display block
     width 100%
+    position relative
+    & label.error
+        display inline-block
+        width auto
+        left 0px
+        z-index 100
 
     &__label
         display block
@@ -24,3 +30,5 @@
         font(Regular,50)
         font-size 12px
         line-height 1.2
+        &.error
+            border 1px dotted rgba(255,0,0,.3)

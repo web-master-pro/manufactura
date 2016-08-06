@@ -1,0 +1,36 @@
+.preview
+    width 100%
+    display flex
+    flex-flow row nowrap
+    justify-content flex-start
+
+    &__thumbs
+        flex 0 0 80px
+        display flex
+        flex-flow column nowrap
+        align-items center
+        margin-right 40px
+        +below(479px)
+            margin-right 20px
+            flex 0 0 70px
+
+    &__thumb
+        flex 0 0 auto
+        display block
+        width auto
+        height 80px
+        margin-bottom 25px
+        cursor pointer
+        &:last-child
+            margin-bottom 0
+        +below(479px)
+            margin-bottom 10px
+            height 70px
+
+    &__stage
+        flex 1 1 320px
+
+    &__img
+        display block
+        max-width 100%
+        height auto

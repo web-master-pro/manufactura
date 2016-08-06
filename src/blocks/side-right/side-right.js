@@ -13,6 +13,8 @@ $(document).ready(function(){
             sidebar.removeClass("on");
             toggle.removeClass("on");
 
+            $("#form-side").validate().resetForm();
+
         } else {
 
             sidebar.css({"right": 0});

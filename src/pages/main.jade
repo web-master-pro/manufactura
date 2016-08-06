@@ -7,6 +7,10 @@ include ../blocks/footer/footer
 include ../blocks/sticker/sticker
 include ../blocks/side-right/side-right
 include ../blocks/form-subscribe/form-subscribe
+include ../blocks/slider-header/slider-header
+include ../blocks/watches/watches
+include ../blocks/block-sale/block-sale
+include ../blocks/block-blog/block-blog
 
 doctype html
 
@@ -19,8 +23,13 @@ html(lang="ru-RU")
     body.page
         .page__container
             +header(class="page__header")
-                img(src="assets/img/main-header-1.jpg" alt="").header__img
-            main.main.page__main
+                +slider-header(class="header__slider")
+            main.main
+                h2.title ПОСЛЕДНИЕ ПОСТУПЛЕНИЯ
+                +watches()
+                +block-sale()
+                +watches-2()
+                +block-blog("БЛОГ")
                 +form-subscribe()
             +footer(class="page__footer")
             +sticker()

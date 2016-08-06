@@ -1,0 +1,95 @@
+.card
+    width 100%
+    padding 0 20px
+
+    &__in
+        container(880px)
+        padding 90px 0 30px
+        border-bottom 1px solid #b38b10
+        display flex
+        flex-flow row wrap
+        justify-content space-around
+        +below(991px)
+            padding-top 50px
+
+    &__left
+    &__right
+        flex 0 1 420px
+        max-width 420px
+        margin-bottom 40px
+
+    +below(880px)
+        &__left
+            order 2
+
+    &__title
+        color #383838
+        font(Bold,50)
+        font-size 20px
+        line-height 1.2
+        text-transform uppercase
+        margin 0 0 20px
+
+    &__values
+        display block
+        list-style none
+        padding 0
+        margin 0 0 30px
+
+    &__value
+        display block
+        color #383838
+        font(Light,10)
+        font-size 14px
+        line-height 1.2
+        padding 0
+        margin 0
+        span
+            color #b38b10
+
+    &__price
+        color black
+        font(Bold,25)
+        font-size 24px
+        line-height 1
+        margin 0 0 25px
+
+    &__buttons
+        display block
+        font-size 0
+
+    &__button
+        display inline-flex
+        flex-flow row nowrap
+        justify-content center
+        align-items center
+        vertical-align top
+        width 145px
+        height 45px
+        color white
+        font(Regular,50)
+        font-size 14px
+        line-height 1.2
+        text-align center
+        background-color #898989
+        transition background-color .3s ease
+        text-decoration none
+        &:hover
+            color @color
+            background-color darken(#898989,15%)
+            text-decoration none
+        &:first-child
+            margin-right 24px
+            background-color #b38b10
+            &:hover
+                background-color darken(#b38b10,15%)
+            +below(479px)
+                margin-right 10px
+        +below(479px)
+            font-size 12px
+            width 120px
+
+
+
+
+

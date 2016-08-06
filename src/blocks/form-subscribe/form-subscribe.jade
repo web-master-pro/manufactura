@@ -3,5 +3,6 @@ mixin form-subscribe()
         .form-subscribe__in
             h3.form-subscribe__title Подписаться на рассылку
             .form-subscribe__group
-                input(type="email" name="email" placeholder="iwantwatches@gmail.com" required).form-subscribe__input
+                .form-subscribe__input-wrapper
+                    input(type="email" name="email" placeholder="iwantwatches@gmail.com" data-rule-required="true" data-msg-required="Обязательное поле" data-rule-email="true" data-msg-email="Неправильный формат Email").form-subscribe__input#form-subscribe-email
                 button(type="submit").form-subscribe__button

@@ -66,3 +66,40 @@ a, input, *:focus
 ::-webkit-scrollbar
     width 9px
 
+label.error
+    display inline-block
+    width 100%
+    background-color #fdfcd3
+    border 1px solid #ddd
+    border-radius 3px
+    color #900
+    font()
+    font-size 12px
+    padding 8px 10px
+    box-shadow 0 0 10px rgba(0, 0, 0, 0.15)
+    position absolute
+    top 95%
+    left 0
+    &::before
+        content ""
+        display block
+        width 14px
+        height 7px
+        border-style solid
+        border-width 0 7px 7px 7px
+        border-color transparent transparent #ddd transparent
+        position absolute
+        top -7px
+        left 10px
+    &::after
+        content ""
+        display block
+        width 14px
+        height 7px
+        border-style solid
+        border-width 0 6px 6px 6px
+        border-color transparent transparent #fdfcd3 transparent
+        position absolute
+        top -6px
+        left 10px
+

@@ -17,9 +17,9 @@ $(document).ready(function(){
                 selfclick = target.is(".form-message") || ($(".form-message").find(target).length > 0);
             if (!selfclick) {
                 $(".sticker__form").removeClass("on");
+                $("#form-message").validate().resetForm();
             };
         };
-        // return true
     });
 
 });

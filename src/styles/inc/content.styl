@@ -28,20 +28,25 @@ h6
     font-size 1.2em
 
 p
-    color $base-text-color
-    font()
-    font-size $base-font-size
-    line-height $base-line-height
-    margin 0 0 1.25em
+    color color #383838
+    font(Light,-10)
+    font-size 14px
+    line-height 1.5
+    margin 0
 
+.intro
+    color #383838
+    font(Medium,-10)
+    font-size 15px
+    line-height 20px
+    margin 0 0 40px
 
 a
-    color $link-color
-    transition color 0.3s ease
+    color #b38b10
     text-decoration none
 
     &:hover
-        color $link-hover-color
+        color #b38b10
         text-decoration underline
 
 img
@@ -102,30 +107,28 @@ q
         font-style italic
 
 blockquote
-    max-width 600px
+    display block
+    max-width 620px
     color #383838
     font(Medium,-10)
     font-size 20px
-    padding 0
-    margin 0 0 20px
-
-    p
-    ul
-    ol
-        &:last-child
-            margin-bottom: 0
-
-        &:first-child
-            margin-top 0
-
-    footer
-    small
+    line-height 1.2
+    text-align center
+    margin 50px auto
+    padding-top 20px
+    position relative
+    &::before
+        content ""
         display block
-        font-size 80%
-        line-height 1.2
+        width 120px
+        height 2px
+        background-color #b38b10
+        position absolute
+        top 0
+        left 50%
+        margin-left -60px
 
-        &:before
-            content '\2014 \00A0' //- em dash, nbsp
+
 
 hr
     display block

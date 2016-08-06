@@ -1,0 +1,37 @@
+.share
+    display inline-block
+
+    &__title
+        color #b38b10
+        font(Regular,-10)
+        font-size 14px
+        line-height 1
+        margin 0 0 9px
+
+    &__button
+        display inline-block
+        margin-right 16px
+        background-repeat no-repeat
+        background-size contain
+        background-position center center
+        &:last-child
+            margin-right 0
+        &--facebook
+            width 9px
+            height 18px
+            background-image embedurl("../../svg/facebook.svg","")
+            &:hover
+                background-image embedurl("../../svg/facebook-hover.svg","")
+        &--twitter
+            width 23px
+            height 18px
+            background-image embedurl("../../svg/twitter.svg","")
+            &:hover
+                background-image embedurl("../../svg/twitter-hover.svg","")
+        &--pinterest
+            width 14px
+            height 18px
+            background-image embedurl("../../svg/pinterest.svg","")
+            &:hover
+                background-image embedurl("../../svg/pinterest-hover.svg","")
+

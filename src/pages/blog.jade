@@ -7,6 +7,8 @@ include ../blocks/footer/footer
 include ../blocks/sticker/sticker
 include ../blocks/side-right/side-right
 include ../blocks/form-subscribe/form-subscribe
+include ../blocks/block-blog/block-blog
+include ../blocks/breadcrumb/breadcrumb
 
 doctype html
 
@@ -20,7 +22,9 @@ html(lang="ru-RU")
         .page__container
             +header(class="page__header")
                 img(src="assets/img/article-header.jpg" alt="").header__img
-            main.main.page__main
+            main.main
+                +breadcrumb-blog()
+                +block-blog-main("БЛОГ")
                 +form-subscribe()
             +footer(class="page__footer")
             +sticker()
