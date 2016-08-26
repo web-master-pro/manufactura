@@ -1,0 +1,83 @@
+.filter
+    margin-top -45px
+    container(1010px)
+    padding 0 10px
+    +below(991px)
+        margin-top 0px
+        padding 0
+
+    &__box
+        background-color #efefef
+        padding 20px 0
+        +below(991px)
+            padding 1px 0
+
+    &__button
+        display none
+        width 100%
+        max-width 280px
+        height 45px
+        border 1px solid #ddd
+        outline none
+        background-color #fff
+        color #231f20
+        font(Extra)
+        font-size 15px
+        line-height 45px
+        text-align center
+        text-transform uppercase
+        cursor pointer
+        margin 0 auto 20px
+        +below(991px)
+            display block
+
+        &.on
+            color white
+            background-color #878787
+            border-color #878787
+
+    &__button-show
+    &__button-hide
+        padding-left 35px
+        background-position 0 45%
+        background-repeat no-repeat
+        background-size 20px 14px
+    &__button-show
+        display inline-block
+        background-image embedurl("../../svg/filter-black.svg", "")
+        ^[0]__button.on &
+            display none
+    &__button-hide
+        display none
+        background-image embedurl("../../svg/filter-white.svg", "")
+        ^[0]__button.on &
+            display inline-block
+
+    &__form
+        display block
+        text-align center
+        +below(991px)
+            display none
+        +above(992px)
+            display block !important
+
+    &__title
+        display inline-block
+        vertical-align middle
+        color #383838
+        font(Play)
+        font-size 16px
+        text-transform uppercase
+        margin 0
+        +below(991px)
+            display none
+
+    &__select
+        display inline-block
+        vertical-align middle
+        margin-left 30px
+        +below(991px)
+            display block
+            width 200px
+            margin 0 auto 20px
+

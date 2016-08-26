@@ -1,0 +1,37 @@
+- var section = "buy"
+
+include ../blocks/head/head
+include ../blocks/scripts/scripts
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/sticker/sticker
+include ../blocks/side-right/side-right
+include ../blocks/form-subscribe/form-subscribe
+include ../blocks/watches/watches
+include ../blocks/card/card
+include ../blocks/filter/filter
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Каталог")
+
+    body.page
+        .page__container
+            +header(class="page__header")
+            main.main.page__main
+                +filter()
+                .introduction.introduction--catalog
+                    p.introduction__text Хотите купить или продать наручные часы? «Первый Часовой Ломбард» работает с продукцией известных брендов: <em>Rolex, Breguet, Cartier</em> и других. Превосходная деловая репутация и более чем 15-летний опыт деятельности гарантируют, что сделка будет выгодной!
+                    p.introduction__text Все представленные в данном разделе товары находятся в <em>Москве</em>. Мы готовы доставить заказанный товар в Киев в течении 2-3 дней. 
+                +watches-3()
+                h2.title ПОСЛЕДНИЕ ПРОСМОТРЕННЫЕ
+                +watches()
+                +form-subscribe()
+            +footer(class="page__footer")
+            +sticker()
+        +side-right()
+        +scripts()

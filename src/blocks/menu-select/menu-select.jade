@@ -1,0 +1,67 @@
+mixin menu-select-brand()
+    .menu-select.menu-select--brand(data-value="-")&attributes(attributes)
+        a(href="#").menu-select__button Бренд
+        ul.menu-select__list
+            li.menu-select__item
+                a(href="#" data-value="Alpina").menu-select__link Alpina <sup>(3)</sup>
+            li.menu-select__item
+                a(href="#" data-value="Breitling").menu-select__link Breitling <sup>(7)</sup>
+            li.menu-select__item
+                a(href="#" data-value="Corum").menu-select__link Corum <sup>(2)</sup>
+            li.menu-select__item
+                a(href="#" data-value="Graham").menu-select__link Graham <sup>(4)</sup>
+            li.menu-select__item
+                a(href="#" data-value="Hublot").menu-select__link Hublot <sup>(5)</sup>
+            li.menu-select__item
+                a(href="#" data-value="Rolex").menu-select__link Rolex <sup>(9)</sup>
+
+mixin menu-select-sex()
+    .menu-select.menu-select--sex(data-value="-")&attributes(attributes)
+        a(href="#").menu-select__button Пол
+        ul.menu-select__list
+            li.menu-select__item
+                a(href="#" data-value="male").menu-select__link Мужские
+            li.menu-select__item
+                a(href="#" data-value="female").menu-select__link Женские
+            li.menu-select__item
+                a(href="#" data-value="unisex").menu-select__link Унисекс
+
+mixin menu-select-price()
+    .menu-select.menu-select--price(data-value="-")&attributes(attributes)
+        a(href="#").menu-select__button Цена
+        ul.menu-select__list
+            li.menu-select__item
+                a(href="#" data-value="1").menu-select__link 0-5000
+            li.menu-select__item
+                a(href="#" data-value="2").menu-select__link 5000-10000
+            li.menu-select__item
+                a(href="#" data-value="3").menu-select__link 10000-30000
+            li.menu-select__item
+                a(href="#" data-value="4").menu-select__link Более 30000
+
+mixin menu-select-abc()
+    .menu-select.menu-select--abc(data-value="-")&attributes(attributes)
+        a(href="#").menu-select__button По алфавиту
+        ul.menu-select__list
+            li.menu-select__item
+                a(href="#" data-value="asc").menu-select__link.checked А-Я / A-Z
+            li.menu-select__item
+                a(href="#" data-value="desc").menu-select__link Я-А / Z-A
+
+mixin menu-select-time()
+    .menu-select.menu-select--time(data-value="-")&attributes(attributes)
+        a(href="#").menu-select__button Время добавления
+        ul.menu-select__list
+            li.menu-select__item
+                a(href="#" data-value="asc").menu-select__link Недавно добавленные
+            li.menu-select__item
+                a(href="#" data-value="desc").menu-select__link Добавленные давно
+
+mixin menu-select-state()
+    .menu-select.menu-select--state(data-value="-")&attributes(attributes)
+        a(href="#").menu-select__button Состояние
+        ul.menu-select__list
+            li.menu-select__item
+                a(href="#" data-value="new").menu-select__link Новые
+            li.menu-select__item
+                a(href="#" data-value="old").menu-select__link Подержанные

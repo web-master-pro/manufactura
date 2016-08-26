@@ -1,0 +1,20 @@
+include ../menu-select/menu-select
+
+mixin filter()
+    .filter&attributes(attributes)
+        .filter__box
+
+            button.filter__button
+                span.filter__button-show Показать сортировку
+                span.filter__button-hide Скрыть сортировку
+
+            // Здесь в атрибуте data-action указываем путь к обработчику фильтра
+            // При изменении любого элемента фильтра данные сериализуются и отправляются синхронно (как обычная форма) методом POST по указанному здесь адресу
+            .filter__form(data-action="update-catalog.php")#filter-form
+                .filter__title Сортировать:
+                +menu-select-brand(class="filter__select")
+                +menu-select-sex(class="filter__select")
+                +menu-select-price(class="filter__select")
+                +menu-select-abc(class="filter__select")
+                +menu-select-time(class="filter__select")
+                +menu-select-state(class="filter__select")

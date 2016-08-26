@@ -27,3 +27,4 @@
 //= ../libs/owl.carousel/owl.carousel.js
 //= ../libs/touchSwipe/jquery.touchSwipe.js
 //= ../libs/smoothscroll/smoothscroll.js
+//= ../libs/jquery.formstyler/jquery.formstyler.js
